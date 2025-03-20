@@ -11,7 +11,8 @@
 </head>
 <body>
     <h1>Daftar Mahasiswa</h1>
-    <a href="tambah.php">Tambah Data</a><br><br>
+    <a href="tambah.php">Tambah Data</a>
+    <br><br>
     <table border="1" cellpadding="10" cellspacing="0">
         <tr>
             <th>No</th>
@@ -36,7 +37,7 @@
             <td><?= $row['telpon']; ?></td>
             <td ><?= $row['alamat']; ?></td>
             <td>
-                <a href="">Edit</a> |
+                <a href="edit.php?id=<?= $row['id']; ?>" onclick="return confirm('yakin ingin mengedit data?');">Edit</a> |
                 <a href="hapus.php?id=<?= $row['id']; ?>" onclick="return confirm('yakin ingin menghapus data?');">Hapus</a>
         </tr>
         <?php $no++; ?>
